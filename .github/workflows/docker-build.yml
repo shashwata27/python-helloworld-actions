@@ -1,4 +1,6 @@
-This is the basic workflow help you to start on Github Action.
+## MOVE THIS FILE to `.github/workflows/docker-build.yaml` TO EXECUTE IT
+
+# This is a basic workflow to help you get started with Actions
 
 name: Docker Build and Push
 
@@ -6,9 +8,9 @@ name: Docker Build and Push
 # events but only for the master branch
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -42,4 +44,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
-          tags: {{ YOUR_DOCKERHUB_REPOSITORY }}/python-helloworld:latest
+          tags: pixelpotato/python-helloworld:latest
