@@ -44,4 +44,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
-          tags: rala/python-helloworld:latest
+          tags: rala/python-helloworld1:latest
