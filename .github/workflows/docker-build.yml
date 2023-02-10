@@ -37,6 +37,6 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          platforms: linux/amd64
+          platforms: linux/arm64
           push: true
           tags: shashwatasaha27/python-helloworld-from-git-actions:latest
