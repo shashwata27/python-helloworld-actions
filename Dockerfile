@@ -1,6 +1,6 @@
 # Application docker file
-FROM python:3.8
-LABEL maintainer="rladkat"
+FROM python:3.9.16
+LABEL maintainer="shashwata"
 
 COPY . /app
 WORKDIR /app
