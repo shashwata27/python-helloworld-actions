@@ -1,10 +1,15 @@
-# Application docker file
-FROM python:3.9.16
-LABEL maintainer="shashwata"
+# Fetching the latest node image on alpine linux
+FROM alpine:3.14
 
-COPY . /app
-WORKDIR /app
-RUN pip install -r requirements.txt
+WORKDIR /to-do-app
 
-# command to run on container start
-CMD [ "python", "app.py" ]
+# # Installing dependencies
+COPY ./package.json /to-do-app
+RUN apk add --update nodejs yarn
+RUN yarn install
+
+# # Copying all the files in our project
+COPY . .
+
+# # Starting our application
+CMD yarn start
